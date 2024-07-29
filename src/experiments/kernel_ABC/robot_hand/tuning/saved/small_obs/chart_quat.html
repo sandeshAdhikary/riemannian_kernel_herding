@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "repeat": ["theta_bandwidth_diags", "theta_bandwidth_quats", "theta_reg", "lr"], "spec": {"layer": [{"mark": {"type": "circle", "color": "steelblue", "opacity": 0.5}, "encoding": {"x": {"type": "ordinal", "field": {"repeat": "repeat"}}, "y": {"type": "quantitative", "field": "val_loss"}}}, {"mark": {"type": "circle", "color": "red"}, "encoding": {"x": {"type": "ordinal", "field": {"repeat": "repeat"}}, "y": {"type": "quantitative", "aggregate": "mean", "field": "val_loss"}}}], "data": {"name": "data-d474d6ae14ae158e2777ef1be60aad61"}}, "columns": 3, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-d474d6ae14ae158e2777ef1be60aad61": [{"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.1, "theta_bandwidth_quats": 10.0, "theta_reg": 1e-09, "lr": 0.01, "val_loss": 0.19737023504530096}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.001, "theta_bandwidth_quats": 10.0, "theta_reg": 1e-06, "lr": 0.001, "val_loss": 0.4140769621331928}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.001, "theta_bandwidth_quats": 0.001, "theta_reg": 1e-09, "lr": 0.001, "val_loss": 0.41267303502650177}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.01, "theta_bandwidth_quats": 1.0, "theta_reg": 1e-09, "lr": 0.001, "val_loss": 0.4102599363167195}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.1, "theta_bandwidth_quats": 0.001, "theta_reg": 1e-09, "lr": 0.01, "val_loss": 0.37483918146530343}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.01, "theta_bandwidth_quats": 0.01, "theta_reg": 1e-06, "lr": 0.1, "val_loss": 0.11569983177772562}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.1, "theta_bandwidth_quats": 1.0, "theta_reg": 0.001, "lr": 0.1, "val_loss": 0.4296984156344303}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.1, "theta_bandwidth_quats": 0.01, "theta_reg": 1e-06, "lr": 0.01, "val_loss": 0.21265550434341915}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.01, "theta_bandwidth_quats": 0.001, "theta_reg": 1e-09, "lr": 0.1, "val_loss": 0.0848722166728782}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 1.0, "theta_bandwidth_quats": 1.0, "theta_reg": 1e-09, "lr": 0.1, "val_loss": 0.03201736419603723}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 1.0, "theta_bandwidth_quats": 0.001, "theta_reg": 1e-09, "lr": 0.001, "val_loss": 0.4106297834049412}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 10.0, "theta_bandwidth_quats": 0.1, "theta_reg": 0.001, "lr": 0.1, "val_loss": 0.11313800666213814}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 1.0, "theta_bandwidth_quats": 1.0, "theta_reg": 1e-09, "lr": 0.001, "val_loss": 0.40993280911849306}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.001, "theta_bandwidth_quats": 0.01, "theta_reg": 1e-09, "lr": 0.001, "val_loss": 0.4126913776105707}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 1.0, "theta_bandwidth_quats": 1.0, "theta_reg": 0.001, "lr": 0.001, "val_loss": 0.40962710140028175}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.01, "theta_bandwidth_quats": 10.0, "theta_reg": 1e-09, "lr": 0.01, "val_loss": 0.30247137999976687}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.001, "theta_bandwidth_quats": 1.0, "theta_reg": 0.001, "lr": 0.001, "val_loss": 0.407364747906976}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 10.0, "theta_bandwidth_quats": 0.001, "theta_reg": 1e-06, "lr": 0.001, "val_loss": 0.41135412318196257}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 1.0, "theta_bandwidth_quats": 0.1, "theta_reg": 0.001, "lr": 0.001, "val_loss": 0.4100519623523436}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.001, "theta_bandwidth_quats": 0.1, "theta_reg": 1e-09, "lr": 0.01, "val_loss": 0.2683681283552452}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.01, "theta_bandwidth_quats": 10.0, "theta_reg": 1e-09, "lr": 0.001, "val_loss": 0.4087324081900699}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.1, "theta_bandwidth_quats": 10.0, "theta_reg": 1e-06, "lr": 0.01, "val_loss": 0.26611015584350467}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 0.1, "theta_bandwidth_quats": 10.0, "theta_reg": 0.001, "lr": 0.1, "val_loss": 0.435351608908092}, {"num_herd": 20.0, "num_epochs": 100.0, "num_iters": 10.0, "num_processors": 4.0, "theta_bandwidth_diags": 10.0, "theta_bandwidth_quats": 1.0, "theta_reg": 1e-06, "lr": 0.001, "val_loss": 0.41055400566659883}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
